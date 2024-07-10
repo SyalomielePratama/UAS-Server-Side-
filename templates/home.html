@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% block isinya %}
+{% load static %}
+
+ <!-- hero -->
+ <section id="hero" data-aos="fade-up">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column bagan-hero">
+                <h1 class="hero-tagline">
+                    Discover and Find Your Own Fashion!
+                </h1>
+                <span class="my-3 tagline-text">
+                    Explore our curated collection of stylish clothing and accessories tailored to your unique taste.
+                </span>
+                <a href="#best" class="col-3 btn btn-outline-success tombol-explore my-3">Explore Now</a>
+            </div>
+            <div class="col-md-4 mx-auto class-sampel">
+                <div class="card card-gambar border-0">
+                    <img src="{{ produk_hero.gambar.url }}" alt="{{ produk_hero.nama_produk }}" class="gambar-hero">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- end-hero -->
+
+  <!-- best -->
+  <section id="best" data-aos="fade-up">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center best-sell">
+                 <h1 class="my-5 fs-1 fw-bold">Best Selling</h1>
+                 <p>Get in on the trend with our curated selection of best-selling styles.</p>
+            </div>
+            <div class="row my-5">
+                {% for produk in best_sellers %}
+                    <div class="col-lg-4 mx-auto sell-sampel text-center">
+                        <div class="card card-gambar-{{ forloop.counter }} border-0">
+                            <img src="{{ produk.gambar.url }}" alt="{{ produk.nama_produk }}" class="gambar-hero">
+                        </div>
+                        <p class="fw-bold mt-4">{{ produk.nama_produk }}</p>
+                        <div class="d-flex justify-content-evenly mb-5">
+                            <span>${{ produk.harga }}</span><span> | </span><span>{{ produk.rating }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <a href="/produk" class="btn btn-outline-success border border-rounded border-2 border-success px-4 tombol-see m-auto">See All</a>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- end-best -->
+
+  <!-- offer -->
+  <section id="offer" data-aos="fade-up">
+    <div class="container my-5" style="background-color: #C2EFD4;">
+        <div class="row">
+            <div class="col-md-6 offer-produk">
+                <div class="card card-gambar-1 border-0">
+                    <img src="{{ produk_offer.gambar.url }}" alt="{{ produk_offer.nama_produk }}" class="gambar-hero">
+                </div>
+            </div>
+            <div class="col-md-6 offer-tagline my-auto bagan-offer d-flex flex-column">
+                <h1>Exclusive offer</h1>
+                <span class="my-3">
+                    Unlock the ultimate style upgrade with our exclusive offer Enjoy savings of up to 40% off on our latest New Arrivals
+                </span>
+                <div class="row d-flex text-center hitung">
+                    <div class="col-sm-3 ">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title" id="hours">06</h5>
+                            <p class="card-text">Hour</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title" id="minutes">18</h5>
+                            <p class="card-text">Min</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title" id="seconds">48</h5>
+                            <p class="card-text">Sec</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>             
+                <a href="/produk/#form" class="col-3 btn btn-outline-success tombol-buy mt-5 me-auto p-3">BUY NOW</a>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- end offer  -->
+
+  <!-- designer -->
+  <section id="designer" data-aos="fade-up">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center best-sell">
+                 <h1 class="my-5 fs-1 fw-normal">Designer Clothes For You</h1>
+                 <p>Immerse yourself in the world of luxury fashion with our meticulously crafted designer clothes!</p>
+            </div>
+            <div class="row my-5 justify-content-center">
+                {% for jenis in jenis_designer %}
+                    <div class="col-lg-4 mx-auto sell-design text-center justify-content-center">
+                        <div class="card card-gambar-{{ forloop.counter }} border-0">
+                            <img src="{{ jenis.gambar.url }}" alt="{{ jenis.jenis_produk }}" class="gambar-hero">
+                        </div>
+                        <p class="fw-bold mt-4 fs-5">{{ jenis.jenis }}</p>
+                        <div class="d-flex justify-content-evenly mb-5">
+                            <span>{{ jenis.deskripsi }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- end designer  -->
+
+
+  {% endblock %}

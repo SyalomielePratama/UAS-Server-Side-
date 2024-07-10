@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block isinya %}
+{% load static %}
+
+     <!-- product -->
+     <section id="product" data-aos="fade-up">
+        <div class="container mt-5 produk-list">
+            <h1 class="text-center fw-bold">Our Products</h1>
+            <div class="row product-list mt-5">
+                {% for produk in produk_list %}
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product baru sell-produk text-center {{ produk.category }}">
+                    <div class="card card-gambar-{{ forloop.counter }} border-0">
+                        <img src="{{ produk.gambar.url }}" alt="{{ produk.nama_produk }}" class="gambar-hero {% if produk.is_new %}new-product{% endif %}">
+                    </div>
+                    <p class=" fw-bold mt-4">{{ produk.nama_produk }}</p>
+                    <div class="d-flex justify-content-evenly mb-5">
+                        <span>${{ produk.harga }}</span><span> | </span> <span>{{ produk.rating }}</span>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:4 and not forloop.last %}
+                    </div><div class="row product-list mt-5">
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+      <!-- end-product  --> 
+      
+      <section id="form" class="container py-5" data-aos="fade-up">
+        <form action="#" method="post">
+            <h2 class="mb-4">Formulir Pembayaran</h2>
+    
+            <div class="mb-3">
+                <label for="cardType" class="form-label">Jenis Kartu:</label>
+                <select id="cardType" name="cardType" class="form-select" required>
+                    <option value="debit">Debit Card</option>
+                    <option value="credit">Credit Card</option>
+                </select>
+            </div>
+    
+            <div class="mb-3">
+                <label for="cardNumber" class="form-label">Nomor Kartu:</label>
+                <input type="text" id="cardNumber" name="cardNumber" class="form-control" placeholder="Masukkan nomor kartu" pattern="[0-9]{13,19}" title="Masukkan antara 13-19 digit angka" required>
+            </div>
+    
+            <div class="mb-3">
+                <label for="expiryDate" class="form-label">Tanggal Kadaluarsa:</label>
+                <input type="text" id="expiryDate" name="expiryDate" class="form-control" placeholder="MM/YYYY" pattern="(0[1-9]|1[0-2])\/[0-9]{4}" title="Format MM/YYYY" required>
+            </div>
+    
+            <div class="mb-3">
+                <label for="cvv" class="form-label">CVV:</label>
+                <input type="number" id="cvv" name="cvv" class="form-control" placeholder="Masukkan CVV" pattern="[0-9]{3,4}" title="Masukkan 3 atau 4 digit angka" required>
+            </div>
+    
+            <button type="submit" class="btn btn-primary">Bayar</button>
+        </form>
+    </section>
+
+    {% endblock %}

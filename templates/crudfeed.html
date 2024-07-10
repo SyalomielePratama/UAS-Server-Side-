@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block isinya %}
+
+<section id="feedback" class="mt-5 py-5" data-aos="fade-up">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12">
+                <h1 class="text-center">Feedback Management</h1>
+                <a href="{% url 'tambah_feedback' %}" class="btn btn-primary my-3">Tambah Feedback</a>
+                <table class="table table-bordered table-hover mt-3">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Feedback</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for feeds in feedback %}
+                        <tr>
+                            <td class='py-3'> <a href="{% url 'ubah_feedback' feeds.id %}">{{ feeds.nama }}</a></td>
+                            <td>{{ feeds.email }}</td>
+                            <td>{{ feeds.feedback }}</td>
+                            <td>
+                                <!-- Tombol Hapus dengan Fancybox -->
+                                <a href="javascript:;" class="btn btn-danger" data-fancybox data-src="#delete-confirm-{{ feeds.id }}">Hapus</a>
+                            </td>
+                        </tr>
+                        <!-- Fancybox content -->
+                        <div style="display: none;" id="delete-confirm-{{ feeds.id }}">
+                            <div class="p-3">
+                                <h4>Konfirmasi Penghapusan</h4>
+                                <p>Apakah Anda yakin ingin menghapus Feedback ini?</p>
+                                <a href="{% url 'hapus_feedback' feeds.id %}" class="btn btn-danger">Hapus</a>
+                                <a href="javascript:;" class="btn btn-secondary" data-fancybox-close>Tutup</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

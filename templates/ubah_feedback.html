@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block isinya %}
+
+<section class='mt-5' id="form" data-aos="fade-up">
+    <div class='container'>
+        <div class='row d-flex justify-content-center'>
+            <div class='col-lg-6 '>
+                {% for message in messages %}
+                    {% if message %}
+                        <div class="alert alert-success"> {{ message }}</div>
+                    {% endif%}
+                {% endfor %}
+                <h1 class='mb-5 text-center fs-1'> Ubah Data Feedback </h1>
+                <h3>Ubah : {{ feedback.nama }}</h3>
+                <form action="{% url 'ubah_feedback' feedback.id %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="wrapper mt-3 d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Ubah</button>
+                        <a href="/crud" class="btn btn-danger">Kembali</a>
+                    </div>
+                </form>
+            </div>
+        </div>    
+    </div>
+</section>
+
+
+{% endblock%}

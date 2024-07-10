@@ -1,0 +1,258 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivo | {{ title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static  'css/index.css'%}">
+    <link rel="stylesheet" href="{% static  'css/contact.css'%}">
+    <link rel="stylesheet" href="{% static  'css/product.css'%}">
+    <link rel="stylesheet" href="{% static  'css/about.css'%}">
+    <link rel="shortcut icon" href="{% static 'icon/nature-letter-r-logo-icon-design-vector-22794499(1).jpg'%}" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/fancybox.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg" style="background: #C2EFD4" data-aos="fade-up" >
+        <div class="container nav-cont py-4">
+          <a class="navbar-brand logo" href="/"><span>RIVO</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/produk">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/kontak">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/crud">CRUD Produk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/crudfeed">CRUD Feedback</a>
+              </li>
+            </ul>
+            <a href="#">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-5 iconn">
+                    <g clip-path="url(#clip0_1_267)">
+                      <path d="M26.25 7.5H22.5C22.5 5.51088 21.7098 3.60322 20.3033 2.1967C18.8968 0.790176 16.9891 0 15 0C13.0109 0 11.1032 0.790176 9.6967 2.1967C8.29018 3.60322 7.5 5.51088 7.5 7.5H3.75C2.75544 7.5 1.80161 7.89509 1.09835 8.59835C0.395088 9.30161 0 10.2554 0 11.25L0 23.75C0.00198482 25.407 0.661102 26.9956 1.83277 28.1672C3.00445 29.3389 4.59301 29.998 6.25 30H17.5C17.8315 30 18.1495 29.8683 18.3839 29.6339C18.6183 29.3995 18.75 29.0815 18.75 28.75C18.75 28.4185 18.6183 28.1005 18.3839 27.8661C18.1495 27.6317 17.8315 27.5 17.5 27.5H6.25C5.25544 27.5 4.30161 27.1049 3.59835 26.4017C2.89509 25.6984 2.5 24.7446 2.5 23.75V11.25C2.5 10.9185 2.6317 10.6005 2.86612 10.3661C3.10054 10.1317 3.41848 10 3.75 10H7.5V12.5C7.5 12.8315 7.6317 13.1495 7.86612 13.3839C8.10054 13.6183 8.41848 13.75 8.75 13.75C9.08152 13.75 9.39946 13.6183 9.63388 13.3839C9.8683 13.1495 10 12.8315 10 12.5V10H20V12.5C20 12.8315 20.1317 13.1495 20.3661 13.3839C20.6005 13.6183 20.9185 13.75 21.25 13.75C21.5815 13.75 21.8995 13.6183 22.1339 13.3839C22.3683 13.1495 22.5 12.8315 22.5 12.5V10H26.25C26.5815 10 26.8995 10.1317 27.1339 10.3661C27.3683 10.6005 27.5 10.9185 27.5 11.25V17.5C27.5 17.8315 27.6317 18.1495 27.8661 18.3839C28.1005 18.6183 28.4185 18.75 28.75 18.75C29.0815 18.75 29.3995 18.6183 29.6339 18.3839C29.8683 18.1495 30 17.8315 30 17.5V11.25C30 10.2554 29.6049 9.30161 28.9017 8.59835C28.1984 7.89509 27.2446 7.5 26.25 7.5ZM10 7.5C10 6.17392 10.5268 4.90215 11.4645 3.96447C12.4021 3.02678 13.6739 2.5 15 2.5C16.3261 2.5 17.5979 3.02678 18.5355 3.96447C19.4732 4.90215 20 6.17392 20 7.5H10Z" fill="#224F34"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_267">
+                        <rect width="30" height="30" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+            </a>
+            <a class="btn btn-outline-success border border-rounded border-2 border-success px-4 fs-6" href="/admin">Login</a>
+          </div>
+        </div>
+      </nav>
+      <!-- end-navbar -->
+
+      {% block isinya %}
+      {% endblock %}
+      
+     <footer style="background-color :#224F34;" data-aos="fade-up">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-4 mb-md-0 mb-5">
+                            <h2 class="footer-heading judul-footer fs-1">Rivo</h2>
+                                <ul class="list-unstyled">
+                                    <li><span class="d-block mt-4 social">Social Media</span></li>
+                                        <div class="icon-wraper d-flex fs-3 gap-3 mt-3">
+                                            <a href="#"><i class="bi bi-instagram"></i></a>
+                                            <a href="#"><i class="bi bi-facebook"></i></a>
+                                            <a href="#"><i class="bi bi-twitter"></i></a>                            
+                                        </div>
+                                </ul>
+                        </div>
+
+                <div class="col-md-4 mb-md-0 mb-4">
+                <h2 class="footer-heading sub-jud fs-5">Shop</h2>
+                <ul class="list-unstyled isi-sub ">
+                <li><a href="/produk" class="d-block text-decoration-none pt-3">Products</a></li>
+                <li><a href="#" class="d-block text-decoration-none pt-3">Overview</a></li>
+                <li><a href="#" class="d-block text-decoration-none pt-3">Pricing</a></li>
+                <li><a href="#" class="d-block text-decoration-none pt-3">Releases</a></li>
+                </ul>
+                </div>
+                <div class="col-md-4 mb-md-0 mb-4">
+                <h2 class="footer-heading sub-jud fs-5">Company</h2>
+                <ul class="list-unstyled isi-sub">
+                <li><a href="/about" class="d-block text-decoration-none pt-3">About Us</a></li>
+                <li><a href="/kontak" class="d-block text-decoration-none pt-3">Contact</a></li>
+                <li><a href="#" class="d-block text-decoration-none pt-3">News</a></li>
+                <li><a href="#" class="d-block text-decoration-none pt-3">Support</a></li>
+                </ul>
+                </div>
+                </div>
+                </div>
+                <div class="col-md-5 mb-md-0 mb-4">
+                <h2 class="footer-heading sub-jud fs-5">Stay Up To Date</h2>
+                <form action="#" class="subscribe-form">
+                <div class="form-group d-flex mt-3">
+                <input type="text" class="border-2 py-1 px-4" placeholder="Enter Your Email">
+                <button type="submit" class=" submit">SUBMIT</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                <div class="row mt-5 pt-4 border-top">
+                <div class="col-md-6 col-lg-8 mb-md-0 mb-4">
+                    <div class="d-flex gap-3 isi-sub">
+                        <a href="#" class="mb-0 text-decoration-none">Terms</a>
+                        <a href="#" class="mb-0 text-decoration-none">Privacy</a>
+                        <a href="#" class="mb-0 text-decoration-none">Cookies</a>
+                    </div>
+                </div>
+                </div>
+                </div>
+        </div>
+     </footer>
+     <script src="{% static 'js/script.js'%}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/fancybox.umd.js"></script>
+    <script>
+      AOS.init();
+      function startTimer() {
+        var hoursSpan = document.getElementById('hours');
+        var minutesSpan = document.getElementById('minutes');
+        var secondsSpan = document.getElementById('seconds');
+
+        function updateTimer() {
+            var now = new Date();
+            var hours = 23 - now.getHours();
+            var minutes = 59 - now.getMinutes();
+            var seconds = 59 - now.getSeconds();
+
+            hoursSpan.textContent = hours < 10 ? '0' + hours : hours;
+            minutesSpan.textContent = minutes < 10 ? '0' + minutes : minutes;
+            secondsSpan.textContent = seconds < 10 ? '0' + seconds : seconds;
+        }
+
+        updateTimer();
+        setInterval(updateTimer, 1000);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        startTimer();
+    });
+
+
+
+    Fancybox.bind("[data-fancybox]", {
+            // Customize Fancybox options if needed
+        });
+        
+    </script>
+</body>
+
+<style>
+  .sell-produk .card-gambar-5 {
+background-color: #CADCD0;
+position: relative;
+overflow: hidden;
+height: 300px;
+bottom: 10px;
+}
+
+.sell-produk .card-gambar-5 .gambar-hero{
+position: absolute;
+width: 400px;
+left: calc(50% + 10px);
+transform: translateX(-50%);
+}
+.sell-produk .card-gambar-6 {
+background-color: #CADCD0;
+position: relative;
+overflow: hidden;
+height: 300px;
+bottom: 10px;
+}
+.sell-produk .card-gambar-6 .gambar-hero{
+position: absolute;
+width: 400px;
+left: calc(50% + 10px);
+transform: translateX(-50%);
+}
+.sell-produk .card-gambar-7 {
+background-color: #CADCD0;
+position: relative;
+overflow: hidden;
+height: 300px;
+bottom: 10px;
+}
+
+.sell-produk .card-gambar-7 .gambar-hero{
+position: absolute;
+width: 400px;
+left: calc(50% + 10px);
+transform: translateX(-50%);
+}
+.sell-produk .card-gambar-9 {
+background-color: #CADCD0;
+position: relative;
+overflow: hidden;
+height: 300px;
+bottom: 10px;
+}
+
+.sell-produk .card-gambar-9 .gambar-hero{
+position: absolute;
+width: 400px;
+left: calc(50% + 10px);
+transform: translateX(-50%);
+}
+.sell-produk .card-gambar-10 {
+background-color: #CADCD0;
+position: relative;
+overflow: hidden;
+height: 300px;
+bottom: 10px;
+}
+
+.sell-produk .card-gambar-10 .gambar-hero{
+position: absolute;
+width: 400px;
+left: calc(50% + 10px);
+transform: translateX(-50%);
+}
+.sell-produk .card-gambar-11 {
+background-color: #CADCD0;
+position: relative;
+overflow: hidden;
+height: 300px;
+bottom: 10px;
+}
+
+.sell-produk .card-gambar-11 .gambar-hero{
+position: absolute;
+width: 400px;
+left: calc(50% + 10px);
+transform: translateX(-50%);
+}
+.new-product {
+width: 100%;
+height: 100%;
+object-fit:cover;
+  }
+</style>
+</html>

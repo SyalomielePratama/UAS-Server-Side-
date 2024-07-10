@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+{% block isinya %}
+<section id="TampilBarang" class="mt-5" data-aos="fade-up">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12">
+                <h1 class="text-center">Daftar Produk</h1>
+                <a href="{% url 'tambah_produk' %}" class="btn btn-primary my-3">Tambah Produk</a>
+                {% for message in messages %}
+                    {% if message %}
+                        <div class="alert alert-success">{{ message }}</div>
+                    {% endif %}
+                {% endfor %}
+                <table class="table table-bordered table-hover mt-3">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Nama Produk</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Rating</th>
+                            <th scope="col">Gambar</th>
+                            <th scope="col">Stok</th>
+                            <th scope="col">Jenis</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for Barang in produk %}
+                        <tr>
+                            <td class='py-3'> <a href="{% url 'ubah_produk' Barang.id %}">{{ Barang.nama_produk }}</a></td>
+                            <td>{{ Barang.harga }}</td>
+                            <td>{{ Barang.rating }}</td>
+                            <td><img src="{{ Barang.gambar.url }}" alt="{{ Barang.nama_produk }}" style="width: 100px; height: auto;"></td>
+                            <td>{{ Barang.stok }}</td>
+                            <td>{{ Barang.jenis_produk }}</td>
+                            <td>
+                                 <!-- Tombol Hapus dengan Fancybox -->
+                    <a href="javascript:;" class="btn btn-danger" data-fancybox data-src="#delete-confirm-{{ Barang.id }}">Hapus</a>
+                    
+                            </td>
+                        </tr>
+                        </div> 
+                          <!-- Fancybox content -->
+                    <div style="display: none;" id="delete-confirm-{{ Barang.id }}">
+                        <div class="p-3">
+                            <h4>Konfirmasi Penghapusan</h4>
+                            <p>Apakah Anda yakin ingin menghapus produk ini?</p>
+                            <a href="{% url 'hapus_produk' Barang.id %}" class="btn btn-danger">Hapus</a>
+                            <a href="javascript:;" class="btn btn-secondary" data-fancybox-close>Tutup</a>
+                        </div>
+                    </div>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
