@@ -1,0 +1,144 @@
+/* navbar */
+
+#navbarText a{
+    color: #224F34;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+#navbarText a:hover{
+    color: #102c1b;
+}
+
+nav button {
+    color: #224F34;
+    font-family: 'Poppins', sans-serif ;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.logo span{
+    color: #224F34;
+    font-family: 'Elephant', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+@media screen and (max-width : 991px) {
+    .iconn{
+        display: none !important;
+    }
+}
+
+/* end-navbar */
+
+#contact {
+    max-width: 700px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+#contact h2 {
+    text-align: center;
+    color: #333;
+}
+
+#contact label {
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+    text-align: left;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+#contact button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#contact button:hover {
+    background-color: #45a049;
+}
+
+/* footer */
+
+footer .judul-footer{
+    color: #FFF;
+    font-family: 'Elephant', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+footer .social{
+    color: #FFF;
+    font-family: 'Roboto Slab' ,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+ .icon-wraper a{
+    color:#fff;
+}
+
+footer .sub-jud{
+    color: #FFF;
+    font-family: 'Roboto Slab'sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+footer .isi-sub  a{
+    color: #FFF;
+    font-family: 'Roboto Slab'sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+footer input{
+    background: #224F34;
+    color: #fff;
+}
+
+footer button{
+    background: #A3F3BE;
+    border: none;
+    color: #224F34;
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* end-footer */

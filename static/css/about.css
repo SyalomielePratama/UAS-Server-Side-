@@ -1,0 +1,202 @@
+/* navbar */
+
+#navbarText a{
+    color: #224F34;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+#navbarText a:hover{
+    color: #102c1b;
+}
+
+nav button {
+    color: #224F34;
+    font-family: 'Poppins', sans-serif ;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.logo span{
+    color: #224F34;
+    font-family: 'Elephant', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+@media screen and (max-width : 991px) {
+    .iconn{
+        display: none !important;
+    }
+}
+
+/* end-navbar */
+
+/* hero */
+#hero{
+    background: #C2EFD4;
+}
+
+.hero-tagline{
+    color: #224F34;
+    font-family: Rufina;
+    font-size: 4em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.tagline-text{
+    max-width: 80%;
+    color: #267D49;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 220%;
+}
+
+img.gambar-hero{
+    width: 600px;
+}
+
+@media screen and (max-width: 320px){
+    img.gambar-hero{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 810px){
+    img.gambar-hero{
+        width: 400px;
+    }
+}
+/* end-hero */
+
+/* content */
+
+#content h1{
+    color: #224F34;
+    font-family: Rufina;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#content p{
+    color: #224F34;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 200%;
+}
+
+/* end content */
+
+/* feed  */
+
+.feed h1{
+    color: #224F34;
+    font-family: 'Roboto Slab' ,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.card-wraper h5{
+    color: #224F34;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.card-wraper p{
+    color: #224F34;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.card-wraper .card-kotak:hover{
+    transition: all 0.3s ease 0s;
+}
+
+.card-wraper .card-kotak:hover{
+    background: #C2EFD4;
+}
+
+/* .card-kotak{
+    min-width: 350px;
+} */
+
+
+/* end-feed */
+
+
+/* footer */
+
+footer .judul-footer{
+    color: #FFF;
+    font-family: 'Elephant', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+footer .social{
+    color: #FFF;
+    font-family: 'Roboto Slab' ,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+ .icon-wraper a{
+    color:#fff;
+}
+
+footer .sub-jud{
+    color: #FFF;
+    font-family: 'Roboto Slab'sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+footer .isi-sub  a{
+    color: #FFF;
+    font-family: 'Roboto Slab'sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+footer input{
+    background: #224F34;
+    color: #fff;
+}
+
+footer button{
+    background: #A3F3BE;
+    border: none;
+    color: #224F34;
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* end-footer */

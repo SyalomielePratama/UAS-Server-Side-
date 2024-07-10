@@ -1,0 +1,311 @@
+/* navbar */
+
+#navbarText a{
+    color: #224F34;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+#navbarText a:hover{
+    color: #102c1b;
+}
+
+nav button {
+    color: #224F34;
+    font-family: 'Poppins', sans-serif ;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.logo span{
+    color: #224F34;
+    font-family: 'Elephant', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+@media screen and (max-width : 991px) {
+    .iconn{
+        display: none !important;
+    }
+}
+
+/* end-navbar */
+
+/* product-list */
+
+.sell-produk .card-gambar-1 {
+    background-color: #CADCD0;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    bottom: 10px;
+}
+
+.sell-produk .card-gambar-1 .gambar-hero{
+    position: absolute;
+    width: 400px;
+    left: calc(50% + 10px);
+    transform: translateX(-50%);
+}
+
+.sell-produk .card-gambar-2 {
+    background-color: #CADCD0;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    bottom: 10px;
+}
+
+.sell-produk .card-gambar-2 .gambar-hero{
+    position: absolute;
+    width: 300px;
+    left: calc(50% + 10px);
+    transform: translateX(-50%);
+}
+
+.sell-produk .card-gambar-3 {
+    background-color: #CADCD0;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    bottom: 10px;
+}
+
+.sell-produk .card-gambar-3 .gambar-hero{
+    position: absolute;
+    width: 500px;
+    left: calc(50% + 14px);
+    transform: translateX(-50%);
+}
+
+.sell-produk .card-gambar-4 {
+    background-color: #CADCD0;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    bottom: 10px;
+}
+
+.sell-produk .card-gambar-4 .gambar-hero{
+    position: absolute;
+    width: 300px;
+    left: calc(50% + 1px);
+    transform: translateX(-50%);
+}
+
+.sell-produk .card-gambar-5 {
+    background-color: #CADCD0;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    bottom: 10px;
+}
+
+.sell-produk .card-gambar-5 .gambar-hero{
+    position: absolute;
+    width: 400px;
+    left: calc(50% + 10px);
+    transform: translateX(-50%);
+}
+.sell-produk .card-gambar-6 {
+    background-color: #CADCD0;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    bottom: 10px;
+}
+.sell-produk .card-gambar-6 .gambar-hero{
+    position: absolute;
+    width: 400px;
+    left: calc(50% + 10px);
+    transform: translateX(-50%);
+}
+.sell-produk .card-gambar-7 {
+    background-color: #CADCD0;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    bottom: 10px;
+}
+
+.sell-produk .card-gambar-7 .gambar-hero{
+    position: absolute;
+    width: 400px;
+    left: calc(50% + 10px);
+    transform: translateX(-50%);
+}
+
+.sell-produk .card-gambar-8 {
+    background-color: #CADCD0;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    bottom: 10px;
+}
+
+.sell-produk .card-gambar-8 .gambar-hero{
+    position: absolute;
+    width: 300px;
+    left: calc(50% + 1px);
+    transform: translateX(-50%);
+}
+
+.produk-list h1{
+    color: #224F34;
+    font-family: 'Roboto Slab' ,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.button-filter button{
+    position: relative;
+    color: #454545;
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 531px){
+    .button-filter button{
+        font-size: small;
+    }
+}
+
+.button-filter button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #374852;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+  
+  .button-filter button:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+/* end-product-list */
+
+#form {
+    text-align: center;
+}
+
+#form form {
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+#form h2 {
+    margin-bottom: 20px;
+}
+
+
+#form label {
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+    text-align: left;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+#form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#form button:hover {
+    background-color: #45a049;
+}
+
+/* footer */
+
+footer .judul-footer{
+    color: #FFF;
+    font-family: 'Elephant', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+footer .social{
+    color: #FFF;
+    font-family: 'Roboto Slab' ,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+ .icon-wraper a{
+    color:#fff;
+}
+
+footer .sub-jud{
+    color: #FFF;
+    font-family: 'Roboto Slab'sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+footer .isi-sub  a{
+    color: #FFF;
+    font-family: 'Roboto Slab'sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+footer input{
+    background: #224F34;
+    color: #fff;
+}
+
+footer button{
+    background: #A3F3BE;
+    border: none;
+    color: #224F34;
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* end-footer */
